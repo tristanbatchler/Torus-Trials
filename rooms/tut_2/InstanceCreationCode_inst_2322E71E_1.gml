@@ -1,0 +1,1 @@
+draw_speech(obj_player, ["Better watch out"]);

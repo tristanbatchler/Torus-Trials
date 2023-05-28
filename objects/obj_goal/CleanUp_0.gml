@@ -1,0 +1,1 @@
+part_emitter_destroy(ps, pe);

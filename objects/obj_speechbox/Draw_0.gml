@@ -22,3 +22,7 @@ draw_text(x - text_width / 2, y - text_height / 2, text);
 
 // Draw the continue prompt
 draw_sprite_ext(sprite_index, image_index, x + bubble_width / 2 - 14, y + bubble_height / 2 - 12, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+// Follow the speaker
+x = speaker.x;
+y = speaker.bbox_top - 32;

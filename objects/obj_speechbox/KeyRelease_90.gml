@@ -1,4 +1,4 @@
 if (array_length(texts) > 0) {
-	draw_speech(x, y, texts);
+	draw_speech(speaker, texts);
 }
 instance_destroy();

@@ -31,7 +31,7 @@ if (grounded) {
     y_vel += grav;
 }
 
-if (keyboard_check_pressed(ord("Z")) && grounded) {
+if (keyboard_check_pressed(ord("Z")) && grounded && !speaking) {
     y_vel = -jump_speed;
 }
 y_vel = clamp(y_vel, -jump_speed, max_y_speed);
@@ -47,6 +47,20 @@ if (collision_tile_meeting(x, check_from_bbox + y_vel)) {
 } else {
     y += y_vel;
 }
+
+
+// Wrap around the room
+if (x < 0) {
+    x = room_width;
+} else if (x > room_width) {
+    x = 0;
+}
+if (y < 0) {
+    y = room_height;
+} else if (y > room_height) {
+    y = 0;
+}
+
 
 // Animation
 if (grounded) {

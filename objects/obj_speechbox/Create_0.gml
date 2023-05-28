@@ -1,0 +1,1 @@
+text = array_shift(texts);

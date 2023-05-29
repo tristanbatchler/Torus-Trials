@@ -15,3 +15,5 @@ if (y < global.cam_min_y + half_spr_h) {
     draw_sprite_ext(sprite_index, image_index, x, y - global.cam_max_y + half_spr_h, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 }
 
+// Draw bounding box rectangle
+draw_rectangle_color(bbox_left, bbox_top, bbox_right, bbox_bottom, c_red, c_red, c_red, c_red, true);

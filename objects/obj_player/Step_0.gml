@@ -11,21 +11,9 @@ if (x_input != 0) {
 }
 x_vel = clamp(x_vel, -max_x_speed, max_x_speed);
 
-// X movement
-var check_from_bbox = get_movement_bbox(bbox_left, bbox_right, x_vel);
-if (collision_tile_meeting(check_from_bbox + x_vel, y)) {
-    while (!collision_tile_meeting(check_from_bbox + sign(x_vel), y)) {
-        x += sign(x_vel);
-        check_from_bbox = get_movement_bbox(bbox_left, bbox_right, x_vel);
-    }
-    x_vel = 0;
-} else {
-    x += x_vel;
-}
-
 // Y velocity
 var almost_grounded = false;
-if (!collision_tile_meeting(x, bbox_bottom + 1)) {
+if (!collision_tile_meeting(x, y + 1)) {
 	if (grounded) {
 		// The player has just become ungrounded
 		if (y_vel >= 0) {
@@ -37,7 +25,7 @@ if (!collision_tile_meeting(x, bbox_bottom + 1)) {
 	grounded = false;
 	
 	// Give some leeway if the player taps the jump button too soon while falling
-	if (y_vel > 0 && collision_tile_meeting(x, bbox_bottom + 2*y_vel)) {
+	if (y_vel > 0 && collision_tile_meeting(x, y + 2*y_vel)) {
 		almost_grounded = true;	
 	}
 } else {
@@ -62,12 +50,21 @@ if (keyboard_check_released(ord("Z")) && y_vel < 0) {
 
 y_vel = clamp(y_vel, -jump_speed, max_y_speed);
 
+
+// X movement
+if (collision_tile_meeting(x + x_vel, y)) {
+    while (!collision_tile_meeting(x + sign(x_vel), y)) {
+        x += sign(x_vel);
+    }
+    x_vel = 0;
+} else {
+    x += x_vel;
+}
+
 // Y movement
-check_from_bbox = get_movement_bbox(bbox_top, bbox_bottom, y_vel);
-if (collision_tile_meeting(x, check_from_bbox + y_vel)) {
-    while (!collision_tile_meeting(x, check_from_bbox + sign(y_vel))) {
+if (collision_tile_meeting(x, y + y_vel)) {
+    while (!collision_tile_meeting(x, y + sign(y_vel))) {
         y += sign(y_vel);
-        check_from_bbox = get_movement_bbox(bbox_top, bbox_bottom, y_vel);
     }
     y_vel = 0;
 } else {

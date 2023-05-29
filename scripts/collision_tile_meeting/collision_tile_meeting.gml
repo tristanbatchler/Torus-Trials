@@ -1,7 +1,6 @@
 ///@description collision_tile_meeting(meeting_x, meeting_y)
 ///@param meeting_x
 ///@param meeting_y
-///@param object_checking
 
 // This script doesn't work unless global vars are set
 if (!instance_exists(Global)) {
@@ -23,7 +22,20 @@ if (meeting_y < global.cam_min_y) {
 	return collision_tile_meeting(meeting_x, global.cam_min_y);
 }
 
-var tilemap_id = layer_tilemap_get_id("Collision");
-var collision_data = tilemap_get_at_pixel(tilemap_id, meeting_x, meeting_y);
+// Script from https://gamemaker.io/en/blog/precise-tile-collisions-by-pixelated-pope
+var _tm = layer_tilemap_get_id("Collision");
 
-return (collision_data != 0);
+var _x1 = tilemap_get_cell_x_at_pixel(_tm, bbox_left + (meeting_x - x), y),
+    _y1 = tilemap_get_cell_y_at_pixel(_tm, x, bbox_top + (meeting_y - y)),
+    _x2 = tilemap_get_cell_x_at_pixel(_tm, bbox_right + (meeting_x - x), y),
+    _y2 = tilemap_get_cell_y_at_pixel(_tm, x, bbox_bottom + (meeting_y - y));
+
+for(var _x = _x1; _x <= _x2; _x++){
+ for(var _y = _y1; _y <= _y2; _y++){
+    if(tile_get_index(tilemap_get(_tm, _x, _y))){
+		return true;
+    }
+ }
+}
+
+return false;

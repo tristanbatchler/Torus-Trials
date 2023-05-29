@@ -23,10 +23,6 @@ if (meeting_y < global.cam_min_y) {
 	return collision_tile_meeting(meeting_x, global.cam_min_y);
 }
 
-// if (meeting_x < global.cam_min_x || meeting_x > global.cam_max_x || meeting_y < global.cam_min_y || meeting_y > global.cam_max_y) {
-// 	return false;
-// }
-
 var tilemap_id = layer_tilemap_get_id("Collision");
 var collision_data = tilemap_get_at_pixel(tilemap_id, meeting_x, meeting_y);
 

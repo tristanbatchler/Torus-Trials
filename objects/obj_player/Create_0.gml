@@ -7,6 +7,7 @@ x_vel = 0.0;
 y_vel = 0.0;
 
 x_accel = 0.4;
+x_decel = 0.8;
 grav = 0.76;
 
 speaking = false;

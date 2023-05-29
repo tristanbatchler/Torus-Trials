@@ -17,8 +17,7 @@ draw_triangle(x - 4, y + bubble_height / 2, x + 4, y + bubble_height / 2, x, y +
 // Draw the text
 draw_set_alpha(1);
 draw_set_color(c_black);
-draw_set_font(fnt_main);
-draw_text(x - text_width / 2, y - text_height / 2, text);
+draw_text_centered(x, y, text);
 
 // Draw the continue prompt
 draw_sprite_ext(sprite_index, image_index, x + bubble_width / 2 - 14, y + bubble_height / 2 - 12, image_xscale, image_yscale, image_angle, image_blend, image_alpha);

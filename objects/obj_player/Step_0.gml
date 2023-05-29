@@ -57,7 +57,7 @@ if (keyboard_check_pressed(ord("Z")) && can_jump) {
 }
 // Allow holding Z to jump higher, while tapping Z for smaller jumps
 if (keyboard_check_released(ord("Z")) && y_vel < 0) {
-	y_vel /= 2;	
+	y_vel /= jump_release_decay_factor;	
 }
 
 y_vel = clamp(y_vel, -jump_speed, max_y_speed);

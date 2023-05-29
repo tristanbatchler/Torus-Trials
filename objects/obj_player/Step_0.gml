@@ -3,7 +3,7 @@ var x_input = keyboard_check(vk_right) - keyboard_check(vk_left);
 
 // X velocity
 if (x_input != 0) {
-    x_vel += x_accel * x_input;
+    x_vel += (climbing ? 1 : x_accel) * x_input;
 } else if (abs(x_vel) > x_accel) {
     x_vel -= x_decel * sign(x_vel);
 } else {
@@ -32,10 +32,12 @@ if (!collision_tile_meeting(x, y + 1)) {
 	grounded = true;
 }
 
-if (grounded) {
-    y_vel = 0;
-} else {
-    y_vel += grav;
+if (!climbing) {
+	if (grounded) {
+	    y_vel = 0;
+	} else {
+	    y_vel += grav;
+	}
 }
 
 
@@ -82,6 +84,45 @@ if (y < global.cam_min_y) {
     y = global.cam_max_y;
 } else if (y > global.cam_max_y) {
     y = global.cam_min_y;
+}
+
+
+// Ladder logic
+if (place_meeting(x, y, obj_ladder)) {
+    if (!climbing && (keyboard_check(vk_up) || keyboard_check(vk_down))) {
+        climbing = true;
+    }
+} else {
+    climbing = false;
+}
+
+if (climbing) {
+    var ladder_nearest = instance_nearest(x, y, obj_ladder);
+    // Horizontally snap to ladder with a gentle force
+	var force_mag = abs(ladder_nearest.x - x) * ladder_snap_force_factor;
+	force_mag = min(max_ladder_snap_force, force_mag);
+    x_vel += force_mag * sign(ladder_nearest.x - x);
+
+    // Overcome the ladder snap force by pressing left/right
+    if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right) && abs(x_vel) > x_accel) {
+        x_vel /= ladder_snap_release_factor;
+    }
+    
+    var y_input = keyboard_check(vk_down) - keyboard_check(vk_up);
+    if (y_input != 0) {
+        y_vel += climb_accel * y_input;
+    } else if (abs(y_vel) > climb_accel) {
+        y_vel -= climb_decel * sign(y_vel);
+    } else {
+        y_vel = 0;
+    }
+    y_vel = clamp(y_vel, -max_climb_speed, max_climb_speed);
+
+    // Jump to exit ladder
+    if (keyboard_check_pressed(ord("Z"))) {
+        climbing = false;
+        y_vel = -jump_speed;
+    }
 }
 
 

@@ -1,0 +1,1 @@
+draw_speech(obj_player, ["woAh, I just fell into the ground", "and came back through the sky", "I wonder..."]);

@@ -31,10 +31,12 @@
     {"name":"par_death","order":5,"path":"objects/par_death/par_death.yy",},
     {"name":"draw_speech","order":2,"path":"scripts/draw_speech/draw_speech.yy",},
     {"name":"tut_3","order":2,"path":"rooms/tut_3/tut_3.yy",},
+    {"name":"rm_test","order":6,"path":"rooms/rm_test/rm_test.yy",},
     {"name":"spr_goal","order":6,"path":"sprites/spr_goal/spr_goal.yy",},
     {"name":"spr_player_fall","order":4,"path":"sprites/spr_player_fall/spr_player_fall.yy",},
     {"name":"tut_2","order":1,"path":"rooms/tut_2/tut_2.yy",},
     {"name":"spr_player_run","order":1,"path":"sprites/spr_player_run/spr_player_run.yy",},
+    {"name":"rm_first","order":5,"path":"rooms/rm_first/rm_first.yy",},
     {"name":"obj_goal","order":3,"path":"objects/obj_goal/obj_goal.yy",},
   ],
 }

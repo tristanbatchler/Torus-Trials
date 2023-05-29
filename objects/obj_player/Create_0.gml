@@ -10,3 +10,5 @@ x_accel = 0.4;
 grav = 0.76;
 
 speaking = false;
+
+grounded = false;

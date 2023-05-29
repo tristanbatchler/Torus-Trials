@@ -24,14 +24,28 @@ if (collision_tile_meeting(check_from_bbox + x_vel, y)) {
 }
 
 // Y velocity
-var grounded = collision_tile_meeting(x, bbox_bottom + 1);
+if (!collision_tile_meeting(x, bbox_bottom + 1)) {
+	if (grounded) {
+		// The player has just become ungrounded
+		if (y_vel >= 0) {
+			// Allow coyote jump for 0.15 seconds
+			alarm[2] = room_speed * 0.15;
+		}
+	}
+	grounded = false;
+} else {
+	grounded = true;
+}
+
 if (grounded) {
     y_vel = 0;
 } else {
     y_vel += grav;
 }
 
-if (keyboard_check_pressed(ord("Z")) && grounded && !speaking) {
+
+var can_jump = (grounded || (alarm[2] > 0 && y_vel >= 0)) && !speaking;
+if (keyboard_check_pressed(ord("Z")) && can_jump) {
     y_vel = -jump_speed;
 }
 y_vel = clamp(y_vel, -jump_speed, max_y_speed);
@@ -50,15 +64,15 @@ if (collision_tile_meeting(x, check_from_bbox + y_vel)) {
 
 
 // Wrap around the room
-if (x < 0) {
-    x = room_width;
-} else if (x > room_width) {
-    x = 0;
+if (x < global.cam_min_x) {
+    x = global.cam_max_x;
+} else if (x > global.cam_max_x) {
+    x = global.cam_min_x;
 }
-if (y < 0) {
-    y = room_height;
-} else if (y > room_height) {
-    y = 0;
+if (y < global.cam_min_y) {
+    y = global.cam_max_y;
+} else if (y > global.cam_max_y) {
+    y = global.cam_min_y;
 }
 
 

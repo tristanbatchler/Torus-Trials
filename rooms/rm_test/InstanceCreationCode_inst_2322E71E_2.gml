@@ -1,0 +1,1 @@
+draw_speech(obj_player, ["What's this?", "Is this what I've been looking for?"]);

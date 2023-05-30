@@ -125,6 +125,22 @@ if (climbing) {
     }
 }
 
+// Key collection: see -><- obj_key event
+
+// Door stuff
+var touching_door = instance_place(x + x_vel, y + y_vel, obj_door);
+if (touching_door != noone && num_keys > 0 && !touching_door.opened) {
+	num_keys -= 1;
+	with (touching_door) {
+		opened = true;
+		// Make the door passable (set par_solid mask to nothing)
+		var par = object_get_parent(object_index);
+		with (par) {
+			mask_index = spr_nothing;	
+		}
+		image_speed = 0.3;
+	}
+}
 
 // Animation
 if (grounded) {

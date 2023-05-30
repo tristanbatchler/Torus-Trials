@@ -99,3 +99,6 @@ draw_healthbar(x0, y0 + 288, x0 + slider_width, y0 + 304, ladder_snap_release_fa
 if (true_mouse_x > x0 && true_mouse_x < x0 + slider_width && true_mouse_y > y0 + 288 && true_mouse_y < y0 + 304) {
     ladder_snap_release_factor += (mouse_wheel_up() - mouse_wheel_down()) * (ladder_snap_release_factor_max - ladder_snap_release_factor_min) * 0.01;
 }
+
+// More debug
+draw_text(x0 - 128, y0 + 320, "numKeys: " + string(num_keys));

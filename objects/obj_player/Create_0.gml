@@ -23,3 +23,6 @@ climbing = false;
 ladder_snap_force_factor = 0.97;
 max_ladder_snap_force = 0.9;
 ladder_snap_release_factor = 5.3;
+
+// Keys
+num_keys = 0;

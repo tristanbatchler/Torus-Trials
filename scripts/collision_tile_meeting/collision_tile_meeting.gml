@@ -38,4 +38,4 @@ for(var _x = _x1; _x <= _x2; _x++){
  }
 }
 
-return false;
+return place_meeting(meeting_x, meeting_y, par_solid);

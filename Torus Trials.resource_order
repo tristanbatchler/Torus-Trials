@@ -17,6 +17,8 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"par_solid","order":12,"path":"objects/par_solid/par_solid.yy",},
+    {"name":"spr_nothing","order":14,"path":"sprites/spr_nothing/spr_nothing.yy",},
     {"name":"tut_6","order":7,"path":"rooms/tut_6/tut_6.yy",},
     {"name":"spr_spikes","order":7,"path":"sprites/spr_spikes/spr_spikes.yy",},
     {"name":"Story","order":4,"path":"objects/Story/Story.yy",},

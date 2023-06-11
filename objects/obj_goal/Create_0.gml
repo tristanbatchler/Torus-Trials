@@ -1,3 +1,11 @@
+locked = false;
+if (place_meeting(x, y, obj_cage)) {
+	locked = true;
+}
+
+
+
+// Particle stuff
 ps = part_system_create();
 pt = part_type_create();
 

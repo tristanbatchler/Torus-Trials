@@ -19,8 +19,9 @@
   "ResourceOrderSettings": [
     {"name":"par_solid","order":12,"path":"objects/par_solid/par_solid.yy",},
     {"name":"spr_nothing","order":14,"path":"sprites/spr_nothing/spr_nothing.yy",},
-    {"name":"tut_6","order":7,"path":"rooms/tut_6/tut_6.yy",},
+    {"name":"lev_6","order":7,"path":"rooms/lev_6/lev_6.yy",},
     {"name":"spr_spikes","order":7,"path":"sprites/spr_spikes/spr_spikes.yy",},
+    {"name":"spr_ball","order":16,"path":"sprites/spr_ball/spr_ball.yy",},
     {"name":"Story","order":4,"path":"objects/Story/Story.yy",},
     {"name":"tut_4","order":3,"path":"rooms/tut_4/tut_4.yy",},
     {"name":"obj_spikes","order":6,"path":"objects/obj_spikes/obj_spikes.yy",},
@@ -43,6 +44,7 @@
     {"name":"spr_ladder","order":12,"path":"sprites/spr_ladder/spr_ladder.yy",},
     {"name":"draw_speech","order":2,"path":"scripts/draw_speech/draw_speech.yy",},
     {"name":"tut_3","order":2,"path":"rooms/tut_3/tut_3.yy",},
+    {"name":"lev_1","order":8,"path":"rooms/lev_1/lev_1.yy",},
     {"name":"obj_cage","order":8,"path":"objects/obj_cage/obj_cage.yy",},
     {"name":"rm_test","order":6,"path":"rooms/rm_test/rm_test.yy",},
     {"name":"spr_collision_test","order":9,"path":"sprites/spr_collision_test/spr_collision_test.yy",},

@@ -142,6 +142,21 @@ if (touching_door != noone && num_keys > 0 && !touching_door.opened) {
 	}
 }
 
+// Cage stuff
+var touching_cage = instance_place(x + x_vel, y + y_vel, obj_cage);
+if (touching_cage != noone && num_keys > 0) {
+	num_keys -= 1;
+	with (touching_cage) {
+		var touching_goal = instance_place(x, y, obj_goal);
+		if (touching_goal == noone) {
+			show_message("This is really bad, there should never be a cage that's not on a goal");
+			game_end(-1);
+		}
+		touching_goal.locked = false;
+		instance_destroy(self);
+	}
+}
+
 // Animation
 if (grounded) {
     if (x_input == 0) {

@@ -21,7 +21,7 @@
     {"name":"spr_nothing","order":14,"path":"sprites/spr_nothing/spr_nothing.yy",},
     {"name":"lev_6","order":7,"path":"rooms/lev_6/lev_6.yy",},
     {"name":"spr_spikes","order":7,"path":"sprites/spr_spikes/spr_spikes.yy",},
-    {"name":"spr_ball","order":16,"path":"sprites/spr_ball/spr_ball.yy",},
+    {"name":"spr_ball","order":15,"path":"sprites/spr_ball/spr_ball.yy",},
     {"name":"Story","order":4,"path":"objects/Story/Story.yy",},
     {"name":"tut_4","order":3,"path":"rooms/tut_4/tut_4.yy",},
     {"name":"obj_spikes","order":6,"path":"objects/obj_spikes/obj_spikes.yy",},

@@ -11,6 +11,6 @@ if (instance_exists(obj_player)) {
 	//draw_text(global.cam_min_x + 16, global.cam_min_y + 16, "x: " + string(x) + " y: " + string(y));
 	//draw_text(global.cam_min_x + 16, global.cam_min_y + 32, "cam_min_x: " + string(global.cam_min_x) + " cam_max_x: " + string(global.cam_max_x));
 	//draw_text(global.cam_min_x + 16, global.cam_min_y + 48, "cam_min_y: " + string(global.cam_min_y) + " cam_max_y: " + string(global.cam_max_y));
-	draw_text(global.cam_min_x + 16, global.cam_min_y + 16, "alarm[2]: " + string(obj_player.alarm[2]));
+	//draw_text(global.cam_min_x + 16, global.cam_min_y + 16, "alarm[2]: " + string(obj_player.alarm[2]));
 
 }

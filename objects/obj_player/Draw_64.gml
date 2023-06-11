@@ -1,4 +1,9 @@
 /// @description Draw sliders for each value in the create event, allowing user to play with the values for the overall feel of the platformer
+
+// To disable the debug draws
+exit
+
+
 var x0 = global.cam_min_x + 128;
 var y0 = global.cam_min_y + 128;
 var slider_width = 128;

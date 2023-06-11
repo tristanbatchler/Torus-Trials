@@ -82,7 +82,6 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_first","path":"rooms/rm_first/rm_first.yy",},},
-    {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"lev_1","path":"rooms/lev_1/lev_1.yy",},},
     {"roomId":{"name":"tut_1","path":"rooms/tut_1/tut_1.yy",},},
     {"roomId":{"name":"tut_2","path":"rooms/tut_2/tut_2.yy",},},
@@ -90,6 +89,7 @@
     {"roomId":{"name":"tut_4","path":"rooms/tut_4/tut_4.yy",},},
     {"roomId":{"name":"tut_5","path":"rooms/tut_5/tut_5.yy",},},
     {"roomId":{"name":"lev_6","path":"rooms/lev_6/lev_6.yy",},},
+    {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

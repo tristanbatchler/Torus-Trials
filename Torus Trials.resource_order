@@ -31,6 +31,7 @@
     {"name":"tut_5","order":4,"path":"rooms/tut_5/tut_5.yy",},
     {"name":"obj_speechbox","order":2,"path":"objects/obj_speechbox/obj_speechbox.yy",},
     {"name":"obj_collision_test","order":7,"path":"objects/obj_collision_test/obj_collision_test.yy",},
+    {"name":"obj_ball","order":13,"path":"objects/obj_ball/obj_ball.yy",},
     {"name":"obj_door","order":11,"path":"objects/obj_door/obj_door.yy",},
     {"name":"Global","order":1,"path":"objects/Global/Global.yy",},
     {"name":"spr_player_jump","order":3,"path":"sprites/spr_player_jump/spr_player_jump.yy",},

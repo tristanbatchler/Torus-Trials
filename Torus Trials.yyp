@@ -52,6 +52,7 @@
     {"id":{"name":"tut_5","path":"rooms/tut_5/tut_5.yy",},},
     {"id":{"name":"obj_speechbox","path":"objects/obj_speechbox/obj_speechbox.yy",},},
     {"id":{"name":"obj_collision_test","path":"objects/obj_collision_test/obj_collision_test.yy",},},
+    {"id":{"name":"obj_ball","path":"objects/obj_ball/obj_ball.yy",},},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},
     {"id":{"name":"spr_tileset_test","path":"sprites/spr_tileset_test/spr_tileset_test.yy",},},
     {"id":{"name":"Global","path":"objects/Global/Global.yy",},},

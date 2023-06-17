@@ -42,6 +42,7 @@
     {"name":"spr_player_jump","order":3,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
     {"name":"draw_text_centered","order":3,"path":"scripts/draw_text_centered/draw_text_centered.yy",},
     {"name":"spr_cage","order":13,"path":"sprites/spr_cage/spr_cage.yy",},
+    {"name":"lev_7","order":9,"path":"rooms/lev_7/lev_7.yy",},
     {"name":"spr_key_button","order":5,"path":"sprites/spr_key_button/spr_key_button.yy",},
     {"name":"obj_key","order":9,"path":"objects/obj_key/obj_key.yy",},
     {"name":"obj_ladder","order":10,"path":"objects/obj_ladder/obj_ladder.yy",},

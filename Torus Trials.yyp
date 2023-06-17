@@ -64,6 +64,7 @@
     {"id":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},},
     {"id":{"name":"draw_text_centered","path":"scripts/draw_text_centered/draw_text_centered.yy",},},
     {"id":{"name":"spr_cage","path":"sprites/spr_cage/spr_cage.yy",},},
+    {"id":{"name":"lev_7","path":"rooms/lev_7/lev_7.yy",},},
     {"id":{"name":"spr_key_button","path":"sprites/spr_key_button/spr_key_button.yy",},},
     {"id":{"name":"obj_key","path":"objects/obj_key/obj_key.yy",},},
     {"id":{"name":"obj_ladder","path":"objects/obj_ladder/obj_ladder.yy",},},
@@ -91,6 +92,7 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_first","path":"rooms/rm_first/rm_first.yy",},},
+    {"roomId":{"name":"lev_7","path":"rooms/lev_7/lev_7.yy",},},
     {"roomId":{"name":"lev_1","path":"rooms/lev_1/lev_1.yy",},},
     {"roomId":{"name":"lev_6","path":"rooms/lev_6/lev_6.yy",},},
     {"roomId":{"name":"tut_1","path":"rooms/tut_1/tut_1.yy",},},

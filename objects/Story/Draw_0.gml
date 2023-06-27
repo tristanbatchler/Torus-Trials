@@ -8,9 +8,17 @@ switch room {
 	case tut_2:
 		// Show player the jump button when near ledge
 		var radius = 96;
-		draw_circle_color(x, y, radius, c_red, c_red, true);
 		if (player_dist < radius) {
 			sprite_index = spr_key_button;
+		}
+		break;
+		
+	case tut_3:
+		// Show the player to hold in the jump button when near the high ledge
+		var radius = 96;
+		if (player_dist < radius) {
+			sprite_index = spr_key_button;
+			draw_text_centered(x, y, "Hold...");
 		}
 		break;
 		
@@ -18,8 +26,6 @@ switch room {
 		// Trigger wtf dialogue and "leap of faith" text
 		var radius1 = 250;
 		var radius2 = 150;
-		draw_circle_color(x, y, radius1, c_red, c_red, true);
-		draw_circle_color(x, y, radius2, c_blue, c_blue, true);
 		if (player_dist < radius1) {
 			if (!one_time_player_spoken_line) {
 				draw_speech(obj_player, ["How the fuck am I meant to get up there?", "God damnit"]);
@@ -29,4 +35,5 @@ switch room {
 		if (player_dist < radius2) {
 			draw_text_centered(x, y, "Leap of faith");
 		}
+		break;
 }
